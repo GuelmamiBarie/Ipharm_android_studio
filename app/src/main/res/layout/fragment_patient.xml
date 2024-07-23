@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/relayout1">
+
+                <include layout="@layout/snippet_patienttoolbar"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/relayout1"
+                android:id="@+id/relayout2">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="175dp"
+                    android:layout_height="175dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp"
+                    android:id="@+id/patientImage">
+                </de.hdodenhof.circleimageview.CircleImageView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/patientImage"
+                    android:layout_marginTop="15dp"
+                    android:layout_centerHorizontal="true"
+                    android:textSize="30sp"
+                    android:textColor="@color/black"
+                    android:layout_marginStart="30dp"
+                    android:id="@+id/patientName">
+                </TextView>
+
+                <ListView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/patientName"
+                    android:id="@+id/lvPatientProperties">
+                </ListView>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/relayout3"
+                android:layout_below="@+id/relayout2"
+                android:padding="5dp"
+                android:layout_marginTop="17dp"
+                android:layout_centerHorizontal="true">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tvBodySurfaceP1"
+                    android:textSize="18sp"
+                    android:textColor="@color/grey"
+                    android:textStyle="bold"
+                    android:text="Surface Corporelle :">
+                </TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tvBodySurfaceP2"
+                    android:textSize="15sp"
+                    android:textColor="@color/black"
+                    android:layout_toRightOf="@+id/tvBodySurfaceP1"
+                    android:layout_marginStart="75dp"
+                    android:layout_marginTop="8.5dp">
+                </TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/tvBodySurfaceP2"
+                    android:layout_marginStart="10dp"
+                    android:text="m²"
+                    android:textColor="@color/teal2">
+                </TextView>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/relayout4"
+                android:layout_below="@+id/relayout3"
+                android:padding="5dp"
+                android:layout_marginTop="17dp"
+                android:layout_centerHorizontal="true">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tvSize1"
+                    android:textSize="18sp"
+                    android:textColor="@color/grey"
+                    android:textStyle="bold"
+                    android:text="Taille :">
+                </TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tvSize2"
+                    android:textSize="15sp"
+                    android:textColor="@color/black"
+                    android:layout_toRightOf="@+id/tvSize1"
+                    android:layout_marginStart="75dp"
+                    android:layout_marginTop="8.5dp">
+                </TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/tvSize2"
+                    android:layout_marginStart="10dp"
+                    android:text="m"
+                    android:textColor="@color/teal2">
+                </TextView>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/relayout5"
+                android:layout_below="@+id/relayout4"
+                android:padding="5dp"
+                android:layout_marginTop="17dp"
+                android:layout_centerHorizontal="true">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tvWeight1"
+                    android:textSize="18sp"
+                    android:textColor="@color/grey"
+                    android:textStyle="bold"
+                    android:text="Poids :">
+                </TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tvWeight2"
+                    android:textSize="15sp"
+                    android:textColor="@color/black"
+                    android:layout_toRightOf="@+id/tvWeight1"
+                    android:layout_marginStart="75dp"
+                    android:layout_marginTop="8.5dp">
+                </TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/tvWeight2"
+                    android:layout_marginStart="10dp"
+                    android:text="kg"
+                    android:textColor="@color/teal2">
+                </TextView>
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

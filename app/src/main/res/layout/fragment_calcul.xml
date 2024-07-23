@@ -1,0 +1,537 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CalculActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/mainScrollView">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/relaLay">
+
+                <include layout="@layout/snippet_calcultoolbar"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/relaLay1"
+                android:layout_below="@+id/relaLay"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:text="Concentration Initiale :"
+                    android:id="@+id/tvInitConstCalc"
+                    android:gravity="center_vertical">
+
+                </TextView>
+
+                <EditText
+                    android:layout_width="90dp"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/tvInitConstCalc"
+                    android:inputType="textNoSuggestions|numberDecimal"
+                    android:textSize="16sp"
+                    android:textColor="@color/black"
+                    android:id="@+id/edInitConstCalc"
+                    android:layout_marginStart="5dp">
+                </EditText>
+
+                <TextView
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:text="mg/ml"
+                    android:layout_toRightOf="@+id/edInitConstCalc"
+                    android:gravity="center_vertical"
+                    android:layout_marginStart="10dp"
+                    android:id="@+id/tvMGML">
+                </TextView>
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/tvMGML"
+                    android:layout_marginStart="5dp"
+                    android:text="Obtenir Le Médicament"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:backgroundTint="@color/teal1"
+                    android:id="@+id/btnGetMedicine">
+                </Button>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/relaLay2"
+                android:layout_below="@+id/relaLay1"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:text="Concentration Minimale :"
+                    android:id="@+id/tvMinConstCalc"
+                    android:gravity="center_vertical">
+
+                </TextView>
+
+                <EditText
+                    android:layout_width="90dp"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/tvMinConstCalc"
+                    android:inputType="textNoSuggestions|numberDecimal"
+                    android:textSize="16sp"
+                    android:textColor="@color/black"
+                    android:id="@+id/edMinConstCalc"
+                    android:layout_marginStart="5dp">
+                </EditText>
+
+                <TextView
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:text="mg/ml"
+                    android:layout_toRightOf="@+id/edMinConstCalc"
+                    android:gravity="center_vertical"
+                    android:layout_marginStart="10dp">
+                </TextView>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/relaLay3"
+                android:layout_below="@+id/relaLay2"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:text="Concentration Maximale :"
+                    android:id="@+id/tvMaxConstCalc"
+                    android:gravity="center_vertical">
+
+                </TextView>
+
+                <EditText
+                    android:layout_width="90dp"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/tvMaxConstCalc"
+                    android:inputType="textNoSuggestions|numberDecimal"
+                    android:textSize="16sp"
+                    android:textColor="@color/black"
+                    android:id="@+id/edMaxConstCalc"
+                    android:layout_marginStart="5dp">
+                </EditText>
+
+                <TextView
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:text="mg/ml"
+                    android:layout_toRightOf="@+id/edMaxConstCalc"
+                    android:gravity="center_vertical"
+                    android:layout_marginStart="10dp">
+                </TextView>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/relaLay4"
+                android:layout_below="@+id/relaLay3"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:text="Présentation :"
+                    android:id="@+id/tvPrésentationCalc"
+                    android:gravity="center_vertical">
+
+                </TextView>
+
+                <EditText
+                    android:layout_width="90dp"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/tvPrésentationCalc"
+                    android:inputType="textNoSuggestions|numberDecimal"
+                    android:textSize="16sp"
+                    android:textColor="@color/black"
+                    android:id="@+id/edPrésentationCalc"
+                    android:layout_marginStart="5dp"
+                    android:hint="Flacon de">
+                </EditText>
+
+                <TextView
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:text="ml"
+                    android:layout_toRightOf="@+id/edPrésentationCalc"
+                    android:gravity="center_vertical"
+                    android:layout_marginStart="10dp">
+                </TextView>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/relaLay5"
+                android:layout_below="@+id/relaLay4"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="80dp"
+                    android:layout_height="40dp"
+                    android:text="Surface Corporelle :"
+                    android:id="@+id/tvSurfaceCorpo"
+                    android:gravity="center_vertical">
+
+                </TextView>
+
+                <EditText
+                    android:layout_width="90dp"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/tvSurfaceCorpo"
+                    android:inputType="textNoSuggestions|numberDecimal"
+                    android:textSize="16sp"
+                    android:textColor="@color/black"
+                    android:id="@+id/edSurfaceCorpo"
+                    android:layout_marginStart="20dp">
+                </EditText>
+
+                <TextView
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:text="m²"
+                    android:layout_toRightOf="@+id/edSurfaceCorpo"
+                    android:gravity="center_vertical"
+                    android:layout_marginStart="10dp"
+                    android:id="@+id/tvM2">
+                </TextView>
+
+                <!--<Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/tvM2"
+                    android:layout_marginStart="5dp"
+                    android:text="Obtenir Le Client"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:backgroundTint="@color/teal1"
+                    android:id="@+id/btnGetClient">
+                </Button>-->
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/relaLay6"
+                android:layout_below="@+id/relaLay5"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="80dp"
+                    android:layout_height="40dp"
+                    android:text="Posologie :"
+                    android:gravity="center_vertical"
+                    android:id="@+id/tvPosologie">
+                </TextView>
+
+                <EditText
+                    android:layout_width="90dp"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/tvPosologie"
+                    android:inputType="textNoSuggestions|numberDecimal"
+                    android:textSize="16sp"
+                    android:textColor="@color/black"
+                    android:id="@+id/edPosologie"
+                    android:layout_marginStart="20dp">
+                </EditText>
+
+                <TextView
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:text="mg/m²"
+                    android:layout_toRightOf="@+id/edPosologie"
+                    android:gravity="center_vertical"
+                    android:layout_marginStart="10dp">
+                </TextView>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/relaLay7"
+                android:layout_below="@+id/relaLay6"
+                android:padding="10dp">
+
+                <Button
+                    android:id="@+id/buttonCalc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginStart="205dp"
+                    android:layout_marginBottom="22dp"
+                    android:backgroundTint="@color/teal1"
+                    android:text="Calculer"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"></Button>
+
+                <Button
+                    android:id="@+id/buttonReset"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginStart="103dp"
+                    android:layout_marginLeft="-200dp"
+                    android:layout_marginBottom="18dp"
+                    android:layout_toRightOf="@+id/buttonCalc"
+                    android:backgroundTint="@color/teal1"
+                    android:text="Effacé"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"></Button>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/relaLay8"
+                android:layout_below="@+id/relaLay7"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="130dp"
+                    android:layout_height="70dp"
+                    android:text="@string/dose_administrer"
+                    android:textStyle="bold"
+                    android:textSize="22sp"
+                    android:gravity="center_vertical"
+                    android:id="@+id/tvDoseToBeAdministered1">
+                </TextView>
+
+                <TextView
+                    android:layout_width="90dp"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/tvDoseToBeAdministered1"
+                    android:enabled="false"
+                    android:textSize="16sp"
+                    android:textColor="@color/black"
+                    android:id="@+id/tvDoseToBeAdministered"
+                    android:paddingTop="40dp"
+                    android:layout_marginStart="20dp">
+                </TextView>
+
+                <TextView
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="20dp"
+                    android:text="mg"
+                    android:layout_toRightOf="@+id/tvDoseToBeAdministered"
+                    android:gravity="center_vertical"
+                    android:layout_marginStart="10dp">
+                </TextView>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/relaLay9"
+                android:layout_below="@+id/relaLay8"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="130dp"
+                    android:layout_height="70dp"
+                    android:text="@string/volume_finale"
+                    android:textStyle="bold"
+                    android:textSize="22sp"
+                    android:gravity="center_vertical"
+                    android:id="@+id/tvFinalVolume1">
+                </TextView>
+
+                <TextView
+                    android:layout_width="90dp"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/tvFinalVolume1"
+                    android:enabled="false"
+                    android:textSize="16sp"
+                    android:textColor="@color/black"
+                    android:id="@+id/tvFinalVolume"
+                    android:paddingTop="40dp"
+                    android:layout_marginStart="20dp">
+                </TextView>
+
+                <TextView
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="20dp"
+                    android:text="mg"
+                    android:layout_toRightOf="@+id/tvFinalVolume"
+                    android:gravity="center_vertical"
+                    android:layout_marginStart="10dp">
+                </TextView>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/relaLay10"
+                android:layout_below="@+id/relaLay9"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="200dp"
+                    android:layout_height="70dp"
+                    android:text="@string/nomber_flacon"
+                    android:textStyle="bold"
+                    android:textSize="22sp"
+                    android:gravity="center_vertical"
+                    android:id="@+id/tvNumberOfBottlesNeeded1">
+                </TextView>
+
+                <TextView
+                    android:layout_width="90dp"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/tvNumberOfBottlesNeeded1"
+                    android:enabled="false"
+                    android:textSize="16sp"
+                    android:textColor="@color/black"
+                    android:id="@+id/tvNumberOfBottlesNeeded"
+                    android:paddingTop="40dp"
+                    android:layout_marginStart="20dp">
+                </TextView>
+
+                <TextView
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="20dp"
+                    android:text="ml"
+                    android:layout_toRightOf="@+id/tvNumberOfBottlesNeeded"
+                    android:gravity="center_vertical"
+                    android:layout_marginStart="10dp">
+                </TextView>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/relaLay11"
+                android:layout_below="@+id/relaLay10"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/tvPocketTypeCalc1"
+                    android:layout_width="200dp"
+                    android:layout_height="70dp"
+                    android:text="Type de poche: "
+                    android:textStyle="bold"
+                    android:textSize="22sp"
+                    android:gravity="center_vertical">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/tvPocketTypeCalc"
+                    android:layout_width="90dp"
+                    android:layout_height="wrap_content"
+                    android:enabled="false"
+                    android:textSize="16sp"
+                    android:textColor="@color/black"
+                    android:paddingTop="30dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_toRightOf="@+id/tvPocketTypeCalc1">
+                </TextView>
+
+                <TextView
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:text="ml"
+                    android:layout_toRightOf="@+id/tvPocketTypeCalc"
+                    android:gravity="center_vertical"
+                    android:layout_marginStart="10dp">
+                </TextView>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/relaLay12"
+                android:layout_below="@+id/relaLay11"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="140dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/reliquat"
+                    android:textStyle="bold"
+                    android:textSize="22sp"
+                    android:gravity="center_vertical"
+                    android:id="@+id/tvRemainderCalc1">
+                </TextView>
+
+                <TextView
+                    android:layout_width="90dp"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/tvRemainderCalc1"
+                    android:enabled="false"
+                    android:textSize="16sp"
+                    android:textColor="@color/black"
+                    android:id="@+id/tvRemainderCalc"
+                    android:layout_marginStart="20dp">
+                </TextView>
+
+                <TextView
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:text="ml"
+                    android:layout_toRightOf="@+id/tvRemainderCalc"
+                    android:gravity="center_vertical"
+                    android:layout_marginStart="10dp">
+                </TextView>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/relaLay13"
+                android:layout_below="@+id/relaLay12"
+                android:padding="10dp">
+
+                <Button
+                    android:id="@+id/btnValidation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="17dp"
+                    android:layout_marginTop="15dp"
+                    android:backgroundTint="@color/teal1"
+                    android:text="Valider"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white">
+                </Button>
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

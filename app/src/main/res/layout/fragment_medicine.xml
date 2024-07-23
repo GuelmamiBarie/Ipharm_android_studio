@@ -1,0 +1,413 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/relayout1">
+
+                <include layout="@layout/snippet_medicinetoolbar"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/relayout2"
+                android:layout_below="@+id/relayout1">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="2dp"
+                    android:src="@mipmap/ic_medicine11_foreground"
+                    android:id="@+id/medicineImage">
+                </de.hdodenhof.circleimageview.CircleImageView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/medicineImage"
+                    android:layout_marginTop="5dp"
+                    android:layout_centerHorizontal="true"
+                    android:textSize="30sp"
+                    android:textColor="@color/black"
+                    android:layout_marginStart="30dp"
+                    android:id="@+id/medicineName">
+                </TextView>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/relayout21"
+                android:layout_below="@+id/relayout2">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_centerHorizontal="true"
+                    android:textSize="25sp"
+                    android:textColor="@color/black"
+                    android:layout_marginStart="30dp"
+                    android:id="@+id/medicineLaboName">
+                </TextView>
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/LaboImage"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_toLeftOf="@+id/medicineLaboName"
+                    android:src="@mipmap/ic_labe4_foreground">
+                </de.hdodenhof.circleimageview.CircleImageView>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/relayout22"
+                android:layout_below="@+id/relayout21">
+
+                <ListView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/lvMedicineProperties">
+                </ListView>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/relayout3"
+                android:layout_below="@+id/relayout22"
+                android:padding="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_centerHorizontal="true">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tvCI1"
+                    android:textSize="20sp"
+                    android:textColor="@color/grey"
+                    android:textStyle="bold"
+                    android:text="Concentration Initiale :">
+                </TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tvCI2"
+                    android:textSize="18sp"
+                    android:textColor="@color/black"
+                    android:layout_toRightOf="@+id/tvCI1"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="8.5dp">
+                </TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/tvCI2"
+                    android:layout_marginStart="10dp"
+                    android:text="mg/ml"
+                    android:textColor="@color/teal2">
+                </TextView>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/relayout4"
+                android:layout_below="@+id/relayout3"
+                android:padding="5dp"
+                android:layout_centerHorizontal="true">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tvCMi1"
+                    android:textSize="20sp"
+                    android:textColor="@color/grey"
+                    android:textStyle="bold"
+                    android:text="Concentration Minimale :">
+                </TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tvCMi2"
+                    android:textSize="18sp"
+                    android:textColor="@color/black"
+                    android:layout_toRightOf="@+id/tvCMi1"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="8.5dp">
+                </TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/tvCMi2"
+                    android:layout_marginStart="10dp"
+                    android:text="mg/ml"
+                    android:textColor="@color/teal2">
+                </TextView>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/relayout5"
+                android:layout_below="@+id/relayout4"
+                android:padding="5dp"
+                android:layout_centerHorizontal="true">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tvCMa1"
+                    android:textSize="20sp"
+                    android:textColor="@color/grey"
+                    android:textStyle="bold"
+                    android:text="Concentration Maximale :">
+                </TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tvCMa2"
+                    android:textSize="18sp"
+                    android:textColor="@color/black"
+                    android:layout_toRightOf="@+id/tvCMa1"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="8.5dp">
+                </TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/tvCMa2"
+                    android:layout_marginStart="10dp"
+                    android:text="mg/ml"
+                    android:textColor="@color/teal2">
+                </TextView>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/relayout6"
+                android:layout_below="@+id/relayout5"
+                android:padding="5dp"
+                android:layout_centerHorizontal="true">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tvPre1"
+                    android:textSize="20sp"
+                    android:textColor="@color/grey"
+                    android:textStyle="bold"
+                    android:text="Présentation :">
+                </TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tvPre2"
+                    android:textSize="18sp"
+                    android:textColor="@color/black"
+                    android:layout_toRightOf="@+id/tvPre1"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="8.5dp">
+                </TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/tvPre2"
+                    android:layout_marginStart="10dp"
+                    android:text="ml"
+                    android:textColor="@color/teal2">
+                </TextView>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/relayout7"
+                android:layout_below="@+id/relayout6"
+                android:padding="5dp"
+                android:layout_centerHorizontal="true">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tvPri1"
+                    android:textSize="20sp"
+                    android:textColor="@color/grey"
+                    android:textStyle="bold"
+                    android:text="Prix :">
+                </TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tvPri2"
+                    android:textSize="18sp"
+                    android:textColor="@color/black"
+                    android:layout_toRightOf="@+id/tvPri1"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="8.5dp">
+                </TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/tvPri2"
+                    android:layout_marginStart="10dp"
+                    android:text="DA"
+                    android:textColor="@color/teal2">
+                </TextView>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/relayout8"
+                android:layout_below="@+id/relayout7"
+                android:padding="5dp"
+                android:layout_centerHorizontal="true">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tvQtn1"
+                    android:textSize="20sp"
+                    android:textColor="@color/grey"
+                    android:textStyle="bold"
+                    android:text="Quantité :">
+                </TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tvQtn2"
+                    android:textSize="18sp"
+                    android:textColor="@color/black"
+                    android:layout_toRightOf="@+id/tvQtn1"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="8.5dp">
+                </TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/tvQtn2"
+                    android:layout_marginStart="10dp"
+                    android:text="flacons"
+                    android:textColor="@color/teal2">
+                </TextView>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/relayout9"
+                android:layout_below="@+id/relayout8"
+                android:padding="5dp"
+                android:layout_centerHorizontal="true">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tvStb1"
+                    android:textSize="20sp"
+                    android:textColor="@color/grey"
+                    android:textStyle="bold"
+                    android:text="Stabilités :">
+                </TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tvStb2"
+                    android:textSize="18sp"
+                    android:textColor="@color/black"
+                    android:layout_toRightOf="@+id/tvStb1"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="8.5dp">
+                </TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/tvStb2"
+                    android:layout_marginStart="10dp"
+                    android:text="heures"
+                    android:textColor="@color/teal2">
+                </TextView>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/relayout10"
+                android:layout_below="@+id/relayout9"
+                android:padding="5dp"
+                android:layout_centerHorizontal="true">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tvRmP1"
+                    android:textSize="20sp"
+                    android:textColor="@color/grey"
+                    android:textStyle="bold"
+                    android:text="Reliquat :">
+                </TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tvRmP2"
+                    android:textSize="18sp"
+                    android:textColor="@color/black"
+                    android:layout_toRightOf="@+id/tvRmP1"
+                    android:layout_marginStart="10dp"
+                    android:text="00.00"
+                    android:layout_marginTop="8.5dp">
+                </TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/tvRmP2"
+                    android:layout_marginStart="10dp"
+                    android:text="ml"
+                    android:textColor="@color/teal2">
+                </TextView>
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

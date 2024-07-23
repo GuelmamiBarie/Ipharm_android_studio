@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/clover"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:src="@drawable/ic_clover"
+        android:elevation="6dp"
+        android:layout_marginEnd="240dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:targetApi="lollipop">
+    </ImageView>
+
+    <LinearLayout
+        android:id="@+id/textSplash"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="300dp"
+        android:elevation="6dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" tools:targetApi="lollipop">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bonjour"
+            android:textColor="@color/white"
+            android:textSize="29sp"></TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Faculté de science Sétif "
+            android:textColor="@color/white"
+            android:textSize="16sp"></TextView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/homeTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="30dp"
+        android:elevation="6dp"
+        android:gravity="left"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:targetApi="lollipop">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/baloo"
+            android:textStyle="italic"
+            android:text="ipharm"
+            android:textColor="@color/white"
+            android:textSize="29sp"></TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Faculté de science Sétif"
+            android:textColor="@color/white"
+            android:textSize="16sp">
+        </TextView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:elevation="6dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/homemenu"
+        android:orientation="vertical"
+        tools:targetApi="lollipop"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="260dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="0.683">
+
+        <LinearLayout
+            android:layout_marginBottom="70dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/layoutPatients"
+                android:layout_marginRight="50dp"
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <ImageView
+                    android:layout_marginTop="4dp"
+                    android:layout_width="85dp"
+                    android:layout_height="85dp"
+                    android:src="@drawable/ic_patient">
+                </ImageView>
+                <TextView
+                    android:layout_width="85dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:text="Patients"
+                    android:textColor="#0E1843"
+                    android:textSize="20sp">
+                </TextView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layoutMedicines"
+                android:layout_marginRight="50dp"
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <ImageView
+                    android:layout_marginTop="4dp"
+                    android:layout_width="85dp"
+                    android:layout_height="85dp"
+                    android:src="@drawable/ic_medicines1">
+                </ImageView>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Médicaments"
+                    android:textColor="#0E1843"
+                    android:textSize="20sp">
+                </TextView>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="70dp"
+            android:layout_marginStart="20dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/layoutCalculation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="50dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="85dp"
+                    android:layout_height="85dp"
+                    android:layout_marginTop="4dp"
+                    android:src="@drawable/ic_heart">
+                </ImageView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Calcul"
+                    android:textColor="#0E1843"
+                    android:textSize="20sp"></TextView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layoutClosing"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="50dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="85dp"
+                    android:layout_height="85dp"
+                    android:layout_marginTop="4dp"
+                    android:src="@mipmap/ic_flask1_foreground">
+                </ImageView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Reliquats"
+                    android:textColor="#0E1843"
+                    android:textSize="20sp"></TextView>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/bgApp"
+        android:layout_width="526dp"
+        android:layout_height="900dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/background_image1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.923"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="TODO">
+    </ImageView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

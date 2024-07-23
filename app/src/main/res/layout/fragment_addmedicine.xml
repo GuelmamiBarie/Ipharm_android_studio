@@ -1,0 +1,392 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/rellayout1">
+
+            <include layout="@layout/snippet_editmedicinetoolbar"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rellayout1"
+            android:id="@+id/rellayout2"
+            android:padding="10dp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:src="@mipmap/ic_medicine11_foreground"
+                android:id="@+id/medicineImage">
+            </de.hdodenhof.circleimageview.CircleImageView>
+
+            <!--<ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_below="@+id/medicineImage"
+                android:src="@drawable/ic_camera"
+                android:layout_alignParentRight="true"
+                android:layout_marginEnd="20dp"
+                android:id="@+id/ivCamera">
+            </ImageView>-->
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rellayout2"
+            android:id="@+id/rellayout3"
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="105dp"
+                android:layout_height="30dp"
+                android:text="Nom"
+                android:textSize="16sp"
+                android:id="@+id/tvNameM"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="30dp">
+            </TextView>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/tvNameM"
+                android:inputType="textNoSuggestions"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:id="@+id/etMedicineName"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="50dp"
+                android:hint="Entrée le nom de médicament">
+            </EditText>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rellayout3"
+            android:id="@+id/rellayout4"
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="105dp"
+                android:layout_height="30dp"
+                android:text="Labo"
+                android:textSize="16sp"
+                android:id="@+id/tvLaboName"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="30dp">
+            </TextView>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/tvLaboName"
+                android:inputType="textNoSuggestions"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:id="@+id/etLaboName"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="50dp"
+                android:hint="Entrée le nom de laboratoire">
+            </EditText>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rellayout4"
+            android:id="@+id/rellayout5"
+            android:padding="10dp">
+
+            <ImageView
+                android:layout_width="105dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_phone_grey"
+                android:id="@+id/ivLaboPhone"
+                android:layout_centerVertical="true">
+            </ImageView>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/ivLaboPhone"
+                android:inputType="textNoSuggestions|numberDecimal"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:id="@+id/etLaboPhone"
+                android:layout_marginStart="40dp"
+                android:layout_marginEnd="50dp"
+                android:hint="Entrée le téléphone de laboratoire">
+            </EditText>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rellayout5"
+            android:id="@+id/rellayout6"
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="105dp"
+                android:layout_height="30dp"
+                android:text="Présentation"
+                android:textSize="16sp"
+                android:id="@+id/tvPresentBottle"
+                android:layout_centerVertical="true">
+            </TextView>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/tvPresentBottle"
+                android:inputType="textNoSuggestions|numberDecimal"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:id="@+id/etPresentBottle"
+                android:layout_marginStart="40dp"
+                android:layout_marginEnd="50dp"
+                android:hint="Entrée la présentation de flacon (mg/ml)">
+            </EditText>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rellayout6"
+            android:id="@+id/rellayout7"
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="105dp"
+                android:layout_height="40dp"
+                android:text="Concentration Initiale"
+                android:textSize="16sp"
+                android:id="@+id/tvInitConst"
+                android:layout_centerVertical="true">
+            </TextView>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/tvInitConst"
+                android:inputType="textNoSuggestions|numberDecimal"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:id="@+id/etInitConst"
+                android:layout_marginStart="40dp"
+                android:layout_marginEnd="50dp"
+                android:hint="mg/ml">
+            </EditText>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rellayout7"
+            android:id="@+id/rellayout8"
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="105dp"
+                android:layout_height="40dp"
+                android:text="Concentration Minimale"
+                android:textSize="16sp"
+                android:id="@+id/tvMinConst"
+                android:layout_centerVertical="true">
+            </TextView>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/tvMinConst"
+                android:inputType="textNoSuggestions|numberDecimal"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:id="@+id/etMinConst"
+                android:layout_marginStart="40dp"
+                android:layout_marginEnd="50dp"
+                android:hint="mg/ml">
+            </EditText>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rellayout8"
+            android:id="@+id/rellayout9"
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="105dp"
+                android:layout_height="40dp"
+                android:text="Concentration Maximale"
+                android:textSize="16sp"
+                android:id="@+id/tvMaxConst"
+                android:layout_centerVertical="true">
+            </TextView>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/tvMaxConst"
+                android:inputType="textNoSuggestions|numberDecimal"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:id="@+id/etMaxConst"
+                android:layout_marginStart="40dp"
+                android:layout_marginEnd="50dp"
+                android:hint="mg/ml">
+            </EditText>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rellayout9"
+            android:id="@+id/rellayout10"
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="105dp"
+                android:layout_height="30dp"
+                android:text="Prix"
+                android:layout_marginStart="30dp"
+                android:textSize="16sp"
+                android:id="@+id/tvPriceM"
+                android:layout_centerVertical="true">
+            </TextView>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/tvPriceM"
+                android:inputType="textNoSuggestions|numberDecimal"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:id="@+id/etPriceM"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="50dp"
+                android:hint="DA">
+            </EditText>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rellayout10"
+            android:id="@+id/rellayout11"
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="105dp"
+                android:layout_height="30dp"
+                android:text="Quantité"
+                android:textSize="16sp"
+                android:id="@+id/tvQuantity"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="30dp">
+            </TextView>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/tvQuantity"
+                android:inputType="textNoSuggestions|numberDecimal"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:id="@+id/etQuantity"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="50dp"
+                android:hint="flacons">
+            </EditText>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rellayout11"
+            android:id="@+id/rellayout12"
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="105dp"
+                android:layout_height="30dp"
+                android:text="Stabilités"
+                android:textSize="16sp"
+                android:id="@+id/tvStability"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="30dp">
+            </TextView>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/tvStability"
+                android:inputType="textNoSuggestions|numberDecimal"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:id="@+id/etStability"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="50dp"
+                android:hint="Heures">
+            </EditText>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rellayout12"
+            android:id="@+id/rellayout13"
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="105dp"
+                android:layout_height="30dp"
+                android:text="Reliquat"
+                android:textSize="16sp"
+                android:id="@+id/tvRemainingPart"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="30dp">
+            </TextView>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/tvRemainingPart"
+                android:inputType="textNoSuggestions|numberDecimal"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:id="@+id/etRemainingPart"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="50dp"
+                android:hint="ml"
+                android:text="00">
+            </EditText>
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    </ScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

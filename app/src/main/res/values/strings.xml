@@ -1,0 +1,42 @@
+<resources>
+    <string name="app_name">Ipharm</string>
+
+    <!--  fragment patient names  -->
+    <string name="edit_patient_fragment">Edit_Patient_Fragment</string>
+    <string name="patient_fragment">Patient_Fragment</string>
+    <string name="view_patients_fragment">ViewPatientsFragment</string>
+    <string name="view_patients2_fragment">ViewPatients2Fragment</string>
+    <string name="add_patient_fragment">AddPatientFragment</string>
+    <string name="change_photo_dialog">ChangePhotoDialog</string>
+
+    <!-- fragment medicine names -->
+    <string name="edit_medicine_fragment">Edit_Medicine_Fragment</string>
+    <string name="medicine_fragment">Medicine_Fragment</string>
+    <string name="view_medicines_fragment">ViewMedicinesFragment</string>
+    <string name="view_medicines2_fragment">ViewMedicines2Fragment</string>
+    <string name="add_medicine_fragment">AddMedicineFragment</string>
+
+    <!-- fragment sales names -->
+    <string name="sell_fragment">Sell_Fragment</string>
+    <string name="selled">Reliquat</string>
+    <string name="view_sales_fragment">ViewSalesFragment</string>
+
+
+    <!-- Patient Keys -->
+    <string name="patient">Patient</string>
+    <string name="edit_patient">Modifier patient</string>
+    <string name="add_patient">Ajouter patient</string>
+
+    <!-- Medicine Keys -->
+    <string name="medicine">Médicament</string>
+    <string name="edit_medicine">Modifier médicament</string>
+    <string name="add_medicine">Ajouter médicament</string>
+    <string name="clover">clover</string>
+
+    <!-- Calculation Keys -->
+    <string name="calculation">Calcul </string>
+    <string name="dose_administrer">Dose à Administrer :</string>
+    <string name="volume_finale">volume Finale :</string>
+    <string name="nomber_flacon">Nombre Flacons Nécessaires :</string>
+    <string name="reliquat">Le Reliquat :</string>
+</resources>

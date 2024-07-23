@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:padding="10dp">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/medicineImage"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_centerVertical="true"
+        android:src="@mipmap/ic_flask1_foreground">
+    </de.hdodenhof.circleimageview.CircleImageView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/medicineImage"
+        android:id="@+id/rl">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvItemMedicineNameS"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="20dp"
+            android:textSize="20sp"
+            android:text="Nom :"
+            android:textStyle="bold|italic"
+            android:textColor="@color/black">
+        </TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvItemMedicineNameS2"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="20dp"
+            android:layout_toRightOf="@+id/tvItemMedicineNameS"
+            android:textSize="18sp"
+            android:textColor="@color/teal2">
+        </TextView>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/medicineImage"
+        android:layout_below="@+id/rl"
+        android:id="@+id/rl1">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvItemDateS"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="20dp"
+            android:textSize="20sp"
+            android:text="Date : "
+            android:textStyle="bold|italic"
+            android:textColor="@color/black">
+        </TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvItemDateS2"
+            android:layout_toRightOf="@+id/tvItemDateS"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="20dp"
+            android:textSize="18sp"
+            android:textColor="@color/teal2">
+        </TextView>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/medicineImage"
+        android:id="@+id/rl2"
+        android:layout_below="@+id/rl1">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvItemStabilityS"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="20dp"
+            android:textSize="20sp"
+            android:text="Stabilité : "
+            android:textStyle="bold|italic"
+            android:textColor="@color/black">
+        </TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvItemStabilityS2"
+            android:layout_toRightOf="@+id/tvItemStabilityS"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="20dp"
+            android:textSize="18sp"
+            android:textColor="@color/teal2">
+        </TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/tvItemStabilityS2"
+            android:layout_marginStart="10dp"
+            android:text="heures"
+            android:textColor="@color/teal2">
+        </TextView>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/medicineImage"
+        android:id="@+id/rl3"
+        android:layout_below="@+id/rl2">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvItemRemainingPartS"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="20dp"
+            android:textSize="20sp"
+            android:text="Reliquat : "
+            android:textStyle="bold|italic"
+            android:textColor="@color/black">
+        </TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvItemRemainingPartS2"
+            android:layout_toRightOf="@+id/tvItemRemainingPartS"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="20dp"
+            android:textSize="18sp"
+            android:textColor="@color/teal2">
+        </TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/tvItemRemainingPartS2"
+            android:layout_marginStart="10dp"
+            android:text="ml"
+            android:textColor="@color/teal2">
+        </TextView>
+    </RelativeLayout>
+
+</RelativeLayout>
